@@ -14,8 +14,7 @@ DROP TABLE job;
 
 ## Part 4: Test it with SQL
 
-SELECT skill.name, skill.description
+SELECT name, description
 FROM skill
-LEFT JOIN job ON skill.id = job.id
-
-WHERE job_id IS NOT null;
+WHERE id IN (SELECT skills_id FROM job_skills WHERE jobs_id IS NOT null)
+ORDER BY name;
