@@ -3,6 +3,10 @@
 select *
 from job;
 
+id (int PK)
+name (varchar(100))
+
+
 ## Part 2: Test it with SQL
 SELECT name
 FROM employer
